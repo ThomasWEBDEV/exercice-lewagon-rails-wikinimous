@@ -1,0 +1,15 @@
+<h1 class="mb-3"><%= @article.title %></h1>
+
+<p><%= simple_format(@article.content) %></p>
+
+<%= link_to edit_article_path(@article), class: "btn btn-outline-primary me-2" do %>
+  <i class="fas fa-pen"></i> Edit
+<% end %>
+
+<%= link_to article_path(@article), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-outline-danger me-2" do %>
+  <i class="fas fa-trash"></i> Delete
+<% end %>
+
+<%= link_to articles_path, class: "btn btn-secondary" do %>
+  <i class="fas fa-arrow-left"></i> Back to List
+<% end %>

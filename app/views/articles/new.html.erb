@@ -1,0 +1,7 @@
+<h1><%= action_name == "new" ? "Create New Article" : "Edit Article" %></h1>
+
+<%= render "form" %>
+
+<%= link_to articles_path, class: "btn btn-secondary mt-3" do %>
+  <i class="fas fa-arrow-left"></i> Back
+<% end %>
